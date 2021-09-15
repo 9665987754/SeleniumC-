@@ -1,0 +1,94 @@
+Assign 1:
+1.Install WebDriver
+For Selenium Bondings:  OFF Line:
+  https://www.selenium.dev/downloads/
+For Chrome Driver:
+  https://chromedriver.chromium.org/downloads
+
+Assign 2: On Line
+1. Add Two Nos to explain how Selenium Project is different than the normal project
+  Adding/Configuring Selenium Bindings in the Project
+  Right Click -> Manage NuGet-> Browser -> Selenium -> Install Selenium WebDriver
+  
+Assign 3:
+1. Launch Browser  
+   Command:
+    IWebDriver driver = new ChromeDriver("Path of the executable");
+2. Maximize the window:    
+3. Open Application:
+	driver.Url = "url name"
+4. Close the browser: Command: Close
+	driver.Close();
+
+Assign 4:  Locators:  Loctors are used to identify the element in Web Application
+Basic:
+1. Locate By ID
+2. By name
+3. By CssSelector
+4. By linkText
+5. By xpath
+Derived:
+
+Collective:
+
+2.Steps:  By Name:
+
+1. Launch Browser  
+2. Maximize the window:
+3. Open Application:
+4. Enter texr in search box
+IWebElement search_box = driver.FindElement(By.Name(name));
+search_box.SendKeys(text);
+		OR
+ driver.FindElement(By.Name(name)).SendKeys(text);
+5. Close the browser
+
+3. Locate By linkText
+
+1. Launch Browser  
+2. Maximize the window:
+3. Open Application:
+4. Locate By Text
+ driver.FindElement(By.LinkText(LinkText)).click();
+5. Close the browser
+
+Xpath:  What is Xpath? How many Types of Xpath do we have?
+Difference between Absolute & Relative xpath?
+
+1. Absolute : starts with 'html'
+Test Case:
+1. Launch Browser  
+2. Maximize the window:
+3. Open Application:
+4. Locate By Xpath
+ driver.FindElement(By.xpath(fullxpath)).SendKeys(Text);
+5. Close the browser
+
+2. Relative:  starts with '//'
+
+/html/body/div[1]/div[3]/form/div/div[1]/div[1]/div[1]/div/div[2]/input
+
+//div[@jsname="gLFyf"]//input
+  OR
+//input[@role='combobox']
+	OR
+//input[@name='q']
+
+CSS Selecor:
+  1. tagname.className : input.gLFyf  or .gLFyf   
+  2. tagname#id  or #id
+  3.  Attribute:input[role='combobox']
+        Starts With -> ^ input[role^='comb']
+		Contains  -> *   input[role*='omb']
+		Ends With  -> $  input[role$='box']
+By TagName:
+Syntax: By.TagName(TagName)
+
+Assignment:  Steps
+1.Go To Google.co.in
+2. Find all the links present on the Page
+3. Display the count of Links
+4. Print all the links on Console
+
+Interview Question :
+Difference between FindElement & FindElements
